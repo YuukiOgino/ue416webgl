@@ -24,8 +24,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 92484060;
-    var PACKAGE_UUID = '59f2c733-f70a-41dc-8067-366471c93cc9';
+    var REMOTE_PACKAGE_SIZE = 90895738;
+    var PACKAGE_UUID = '790066d3-8837-49a0-8ad0-1677db674330';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -130,7 +130,7 @@ Module['FS_createPath']('/MyProject/Content', 'Paks', true, true);
       new DataRequest(0, 106, 0, 0).open('GET', '/Manifest_NonUFSFiles_HTML5.txt');
     new DataRequest(106, 144, 0, 0).open('GET', '/UE4CommandLine.txt');
     new DataRequest(144, 361, 0, 0).open('GET', '/Engine/Build/Build.version');
-    new DataRequest(361, 92484060, 0, 0).open('GET', '/MyProject/Content/Paks/MyProject-HTML5.pak');
+    new DataRequest(361, 90895738, 0, 0).open('GET', '/MyProject/Content/Paks/MyProject-HTML5.pak');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
