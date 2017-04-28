@@ -45,7 +45,7 @@
 		// By default, Shipping builds serve out compressed assets, and Development builds serve uncompressed assets.
 		// Change the following line to customize. When hosting UE4 builds live on a production CDN, compression
 		// should always be enabled, since uncompressed files are too huge to be downloaded over the web.
-		const serveCompressedAssets = true;
+		const serveCompressedAssets = false;
 
 		// For the large .data file, there's two ways to manage compression: either UE4 UnrealPak tool can compress it in engine, or
 		// it can be gzip compressed on disk like other assets. Compressing via UnrealPak has the advantage of storing a smaller data
@@ -63,7 +63,7 @@
 			assetDownloadProgress: {}, // Track how many bytes of each needed asset has been downloaded so far.
 
 			UE4_indexedDBName: 'UE4_assetDatabase_MyProject', // TODO Nick: this should be an ascii ID string without special characters that is unique to the project that is being packaged
-			UE4_indexedDBVersion: 201704281208, // Bump this number to invalidate existing IDB storages in browsers.
+			UE4_indexedDBVersion: 201704281236, // Bump this number to invalidate existing IDB storages in browsers.
 
 			preRun: [function() { addRunDependency('wait-for-compiled-code'); }]
 		};
